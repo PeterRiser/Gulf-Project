@@ -17,7 +17,7 @@ def general_PRs(d,p):
         total+= weight*p.preferences[word]
     return total
 
-
+    """I am messing with github"""
     # k=0
     # if (p.questionaire['works_in_industry'] and d.keywords['industry']):
     #     k+=5
