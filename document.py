@@ -4,19 +4,17 @@ class Document:
     listed=0
     keywords={}
 
-
     # CONSTRUCTOR #
     # title is str
     # data is str of medium of document
     def __init__(self,title):
         self.title=title
         self.listed=0
-        self.keywords={'social_wellbeing':0.0;'economics':0.0;'community_action':0.0;'health':0.0;\
-                          'vulnerable_populations':0.0;'environment_energy':0.0;'personal_impact':0.0;\
-                          'response_following':0.0;'plans_planning':0.0;'information_needs':0.0;\
-                          'communicating_with_stakeholders':0.0;'tools_resources_training':0.0;\
-                          'short_term':0.0;'medium_term':0.0;'long_term':0.0}
-
+        self.keywords={'social_wellbeing':0.0,'economics':0.0,'community_action':0.0,'health':0.0,\
+                          'vulnerable_populations':0.0,'environment_energy':0.0,'personal_impact':0.0,\
+                          'response_following':0.0,'plans_planning':0.0,'information_needs':0.0,\
+                          'communicating_with_stakeholders':0.0,'tools_resources_training':0.0,\
+                          'short_term':0.0,'medium_term':0.0,'long_term':0.0}
 
     def __str__(self):
         return self.title
@@ -34,7 +32,7 @@ class Document:
             s = "Document"
         s += '('+repr(self.title)+')'
         return s
-    
+
     def add_keyword(self,word,weight):
         self.keywords[word]=weight
     def print_keywords(self):
@@ -49,7 +47,7 @@ class Document:
     '''
     def __eq__(self, other):
        return PRs(self) == PRs(other)
-    '''   
+    '''
     def __hash__(self):
         #return hash(PRs(self))
         return keywords_hash(self.keywords)
